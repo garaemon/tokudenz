@@ -2,27 +2,34 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=320, user-scalable=no" />
     <title>特電Z</title>
     <link rel="stylesheet"
           href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
     <link rel="stylesheet"
-          href="/tokuden.css"/>
+          href="./tokuden.css"/>
+    <script src="http://code.jquery.com/jquery-1.6.4.min.js">
+    </script>
+    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js">
+    </script>
+    <script type="text/javascript" src="./iso8601.js"></script>
+    <script type="text/javascript" src="./tokuden.js"></script>
   </head>
   <body>
     <div id="wrapper">
       <h1>特電Z</h1>
-      <h2>所定の時間に電話をかけよう! (iPhoneのみ)</h2>
+      <h2>所定の時間に電話をかけよう! (iPhoneのみかな?)</h2>
       <h3>このページを閉じたらだめだよ</h3>
       <h3>このページを利用して起きた一切の出来事に関して無保証です</h3>
       <div class="inputs">
-        <label>時刻</label>
-        <input type="datetime-local" name="name" id="name" value="" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset" />
-        <input type="text" name="tel" />
-        <input type="submit"/>
+        <form id="input" action="#">
+          <label>時刻</label>
+          <input type="datetime" name="name" id="dateinput" value=""/>
+          <label>電話番号</label>
+          <input type="tel" name="tel" id="telinput"/>
+          <input type="button" value="スタート" id="submitinput"/>
+        </form>
       </div>
     </div>
-    <script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-    <script src="./tokuden.js"></script>
   </body>
 </html>
