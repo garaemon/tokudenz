@@ -4,7 +4,7 @@ $(function() {
     var tel = $("#telinput").val();
     var dateObj = isodate.parse(date);
     // start counter
-    var LOOP_MILSEC = 100;
+    var LOOP_MILSEC = 10;
     $(".inputs").html("");
     
     function tick() {
@@ -14,17 +14,13 @@ $(function() {
       if (leftSecs < 0)
         location.href = "tel:" + tel;
       else {
-        //setTimeout(tick, LOOP_MILSEC);
+        setTimeout(tick, LOOP_MILSEC);
         $(".inputs").html("<h3 class=\"resttime\">残り"
                           + " <span class=\"restsec\">" + leftSecs
                           + "秒!</span></h3>"
                           + "<h3>" + tel + "に電話します</h3>");
-        tick();
       }
-
-      
     };
-    //setTimeout(tick, LOOP_MILSEC);
-    tick()
+    setTimeout(tick, LOOP_MILSEC);
   });
 });
