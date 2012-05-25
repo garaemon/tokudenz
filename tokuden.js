@@ -3,7 +3,6 @@ $(function() {
     var date = $("#dateinput").val();
     var tel = $("#telinput").val();
     var dateObj = isodate.parse(date);
-    alert(dateObj);
     // start counter
     var LOOP_MILSEC = 100;
     $(".inputs").html("");
